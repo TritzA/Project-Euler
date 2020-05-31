@@ -53,4 +53,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = nombre
-    print("Reponse : ", reponse, ", en : ", fin_temps(temps_initial), "ms")
+    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms")
+    # Reponse : 6857.0 , en : 1.9985 ms
