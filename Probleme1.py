@@ -17,7 +17,7 @@ def est_multiple(nombre, multiple):
 # si c'est le cas on l'ajoute à la somme.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
-    nombre = 1
+    nombre = 3
     somme = 0
 
     while nombre < 1000:
