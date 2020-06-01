@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     nombre = 600851475143
     recherche_facteur = 2
-    max = 0
+    facteur_max = 0
     trouve_facteur_premier = False
 
     if nombre % recherche_facteur == 0:
@@ -40,11 +40,12 @@ if __name__ == '__main__':
 
     while not estPremier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
-        while not trouve_facteur_premier or trouve_facteur_premier < max:
+        while not trouve_facteur_premier or trouve_facteur_premier < facteur_max:
+
             if nombre % recherche_facteur == 0 and estPremier(recherche_facteur):
-                if recherche_facteur < max:
-                    max = recherche_facteur
                 trouve_facteur_premier = True
+                if recherche_facteur < facteur_max:
+                    facteur_max = recherche_facteur
             else:
                 recherche_facteur += 2
 
@@ -53,5 +54,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = nombre
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms")
-    # Reponse : 6857.0 , en : 1.9985 ms
+    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Reponse : 6857.0 , en : 1.9985 ms.
