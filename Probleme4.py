@@ -30,7 +30,7 @@ def decomposition_facteur_possible(nb):
 
 # Resume : En partant du plus gros nombre possible,
 # on cherche un nombre qui est à la fois et palindrome
-# et décomposable en deux facteurs composés de trois chiffres
+# et décomposable en deux facteurs composés de trois chiffres.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
 

@@ -7,11 +7,11 @@ def fin_temps(temps_initial):
     return (temps_final - temps_initial) / math.pow(10, 6)
 
 
-def estPremier(nb):
+def est_premier(nb):
     nombre = 2
     premier = True
 
-    while nombre < int(math.sqrt(nb)) and premier:
+    while nombre < int(math.sqrt(nb))+1 and premier:
         if nb % nombre == 0:
             premier = False
         nombre += 1
@@ -38,11 +38,11 @@ if __name__ == '__main__':
     else:
         recherche_facteur += 1
 
-    while not estPremier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
+    while not est_premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
         while not trouve_facteur_premier or trouve_facteur_premier < facteur_max:
 
-            if nombre % recherche_facteur == 0 and estPremier(recherche_facteur):
+            if nombre % recherche_facteur == 0 and est_premier(recherche_facteur):
                 trouve_facteur_premier = True
                 if recherche_facteur < facteur_max:
                     facteur_max = recherche_facteur
