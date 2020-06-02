@@ -13,10 +13,10 @@ def est_divisible(nombre):
     # les premiers et les composés sans les premiers facteurs des composés
 
 
-# Resume : Itérateur avance jusqu'à trouver un nombre divisible par les nombres de 1 a 20
-# en testant chaque nombre une fois (exemple: on ne teste par 2 ni 3 car on test 16 et 9).
+# Résumé: Itérateur avance jusqu'à trouver un nombre divisible par les nombres de 1 à 20
+# en testant chaque nombre une fois (exemple: on ne teste par 2 ni 3, car on teste 16 et 9).
 # L'itérateur avance par bond du produit des nombres premiers entre 2 et 20, car le nombre recherché
-# doit forcément être une composition des ces nombres.
+# doit forcément être une composition de ces nombres.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
 

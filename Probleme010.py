@@ -18,7 +18,7 @@ def est_premier(nb):
     return premier
 
 
-# Resume : Parcours les nombre de 3 à 2M par bonds de 2 avec une somme commencant à 2 (seul nombre premier pair).
+# Résumé : On parcourt les nombres de 3 à 2M par bonds de 2 avec une somme commençant à 2 (seul nombre premier pair).
 if __name__ == '__main__':
     temps_initial = time.time_ns()
     iterateur = 3

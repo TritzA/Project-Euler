@@ -11,9 +11,9 @@ def est_multiple(nombre, multiple):
     return nombre % multiple == 0
 
 
-# Resume : On parcours les nombres de 1 à 1000.
+# Résumé : On parcourt les nombres de 1 à 1000.
 # Si un nombre multiple de 3 on l'ajoute à la somme.
-# S'il ne l'est pas on verifie s'il est multiple de 5,
+# S'il ne l'est pas on vérifie s'il est multiple de 5,
 # si c'est le cas on l'ajoute à la somme.
 if __name__ == '__main__':
     temps_initial = time.time_ns()

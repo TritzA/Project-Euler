@@ -18,8 +18,8 @@ def est_premier(nb):
     return premier
 
 
-# Resume : En partant de notre nombre de départ
-# dès qu'on trouve une de ses facteurs premier,
+# Résumé : En partant de notre nombre de départ
+# dès qu'on trouve un de ses facteurs premier,
 # on le divise par celui-ci et on le garde en mémoire
 # s'il est le plus grand trouvé. On recommence le
 # même processus jusqu'à ce que le nombre restant

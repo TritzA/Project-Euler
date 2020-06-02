@@ -7,7 +7,7 @@ def fin_temps(temps_initial):
     return (temps_final - temps_initial) / math.pow(10, 6)
 
 
-# Resume :
+# Résumé :
 if __name__ == '__main__':
     temps_initial = time.time_ns()
 

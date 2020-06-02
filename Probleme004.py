@@ -28,7 +28,7 @@ def decomposition_facteur_possible(nb):
     return decomposition
 
 
-# Resume : En partant du plus gros nombre possible,
+# Résumé : En partant du plus gros nombre possible,
 # on cherche un nombre qui est à la fois et palindrome
 # et décomposable en deux facteurs composés de trois chiffres.
 if __name__ == '__main__':

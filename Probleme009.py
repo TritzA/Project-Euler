@@ -11,8 +11,8 @@ def est_triplet_pytago(a, b, c):
     return math.pow(a, 2) + math.pow(b, 2) == math.pow(c, 2)
 
 
-# Resume : Tente toutes les combinaisons de somme possible de
-# trois nombres étant aussi des triplets pytagoriciens.
+# Résumé : Tente toutes les combinaisons de sommes possibles de
+# trois nombres étant aussi des triplets pythagoriciens.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
     somme_max = 1000

@@ -30,9 +30,9 @@ def lire_nombre():
            "71636269561882670428252483600823257530420752963450"
 
 
-# Resume : Parcours la chaine de caratère en incrémentant la mutiplication de 13 nombres
-# à la fois en conservant le plus grand produit. Si l'itératieur arrive sur un 0,
-# il passe touts les produits possibles contenant ce dernier.
+# Résumé : Parcours la chaine de caratères en incrémentant la multiplication de 13 nombres
+# à la fois en conservant le plus grand produit. Si l'itérateur arrive sur un 0,
+# il passe tous les produits possibles contenant ce dernier.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
     taille_produit = 13

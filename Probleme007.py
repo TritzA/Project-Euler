@@ -17,7 +17,7 @@ def est_premier(nb):
     return premier
 
 
-# Resume : On passe à travers les nombres en comptant à l'aide d'un compteur chaque fois qu'on en trouve un premier.
+# Résumé : On passe à travers les nombres en comptant à l'aide d'un compteur chaque fois qu'on en trouve un premier.
 # La recherche se fait par bonds de deux à partir d'un nombre impair (3) et le compteur commence à 1 à cause du seul
 # nombre premier pair (2).
 if __name__ == '__main__':

@@ -25,7 +25,7 @@ def carre_somme():
     return carre_somme * carre_somme
 
 
-# Resume : On effectue la somme des carrés puis le carré de la somme,
+# Résumé : On effectue la somme des carrés puis le carré de la somme,
 # puis on calcule la différence entre le deuxième et le premier.
 if __name__ == '__main__':
     temps_initial = time.time_ns()

@@ -115,7 +115,7 @@ def lire_matrice():
     return mat
 
 
-# Resume :
+# Résumé :
 if __name__ == '__main__':
     temps_initial = time.time_ns()
 

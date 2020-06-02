@@ -7,8 +7,8 @@ def fin_temps(temps_initial):
     return (temps_final - temps_initial) / math.pow(10, 6)
 
 
-# Resume : On parcours la suite de Fibonacci par bonds de 3,
-# chaque 3 nombres on trouve un nombre paire qu'on ajoute à la suite
+# Résumé : On parcourt la suite de Fibonacci par bonds de 3,
+# chaque 3 nombres on trouve un nombre pair qu'on ajoute à la suite.
 if __name__ == '__main__':
     temps_initial = time.time_ns()
     nb_un = 0
