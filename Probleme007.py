@@ -10,7 +10,6 @@ def fin_temps(temps_initial):
 def est_premier(nb):
     nombre = 2
     premier = True
-
     while nombre < int(math.sqrt(nb)) + 1 and premier:
         if nb % nombre == 0:
             premier = False
@@ -25,8 +24,9 @@ if __name__ == '__main__':
     temps_initial = time.time_ns()
     compteur_premier = 1
     nombre_teste = 3
+    dernier_premier = 10001
 
-    while compteur_premier != 10001:
+    while compteur_premier != dernier_premier:
         if est_premier(nombre_teste):
             compteur_premier += 1
         nombre_teste += 2

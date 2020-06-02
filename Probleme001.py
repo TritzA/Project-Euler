@@ -19,8 +19,9 @@ if __name__ == '__main__':
     temps_initial = time.time_ns()
     nombre = 3
     somme = 0
+    dernier_nombre = 1000
 
-    while nombre < 1000:
+    while nombre < dernier_nombre:
         if est_multiple(nombre, 3):
             somme += nombre
         elif est_multiple(nombre, 5):
