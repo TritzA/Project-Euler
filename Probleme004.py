@@ -45,5 +45,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = iterateur
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Reponse : 906609 , en : 206.4501 ms.
+    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Réponse : 906609 , en : 206.4501 ms.

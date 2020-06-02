@@ -60,5 +60,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = produit_max
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Reponse : 23514624000 , en : 1.9982 ms.
+    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Réponse : 23514624000 , en : 1.9982 ms.

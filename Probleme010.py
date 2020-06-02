@@ -32,5 +32,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = somme
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Reponse : 142913828922 , en : 67604.2771 ms.
+    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Réponse : 142913828922 , en : 67604.2771 ms.

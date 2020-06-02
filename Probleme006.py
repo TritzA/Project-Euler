@@ -35,5 +35,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = carre_somme - somme_carre
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Reponse : 25164150 , en : 0.0 ms.
+    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Réponse : 25164150 , en : 0.0 ms.

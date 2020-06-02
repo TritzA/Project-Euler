@@ -8,13 +8,14 @@ def fin_temps(temps_initial):
 
 
 def est_premier(nb):
-    facteur = 3
+    diviseur = 3
     premier = True
-    while facteur < int(math.sqrt(nb)) + 1 and premier:
-        if nb % facteur == 0:
+    max_diviseur = math.floor(math.sqrt(nb))+1
+    while diviseur < max_diviseur and premier:
+        if nb % diviseur == 0:
             premier = False
         else:
-            facteur += 2
+            diviseur += 2
     return premier
 
 
@@ -54,5 +55,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = int(nombre)
-    print("Reponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Reponse : 6857 , en : 0.9993 ms.
+    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    # Réponse : 6857 , en : 0.9989 ms.
