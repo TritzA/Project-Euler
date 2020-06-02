@@ -6,4 +6,4 @@ Version de Python : 3.8
 
 IDE (environnement) : PyCharm (Community)
 
-Lien du site : https://projecteuler.net
+Lien du site où sont les problèmes : https://projecteuler.net
