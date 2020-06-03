@@ -8,8 +8,8 @@ def fin_temps(temps_fin, temps_debut):
 
 # Résume : Compte le nombre de multiple dans chaque ensemble,
 # puis multiplie ce nombre par la valeur moyenne du multiple.
-# Finalement, effectu l'union entre les ensemble et retire
-# l'ensemble des multiple de 3 et de 5 (donc de 15) qui sont comptés deux fois.
+# Finalement, effectue l'union entre les ensembles et retire
+# l'ensemble des multiples de 3 et de 5 (donc de 15) qui sont comptés deux fois.
 if __name__ == '__main__':
     temps_debut = time.time_ns()
     fin = 999
