@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_premier(nb):
@@ -22,7 +21,8 @@ def est_premier(nb):
 # La recherche se fait par bonds de deux à partir d'un nombre impair (3) et le compteur commence à 1 à cause du seul
 # nombre premier pair (2).
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
+
     compteur_premier = 1
     nombre_teste = 3
     dernier_premier = 10001
@@ -34,5 +34,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = nombre_teste - 2
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 104743 , en : 346.8201 ms.

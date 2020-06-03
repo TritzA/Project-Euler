@@ -2,15 +2,15 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 # Résumé : On parcourt la suite de Fibonacci par bonds de 3,
 # chaque 3 nombres on trouve un nombre pair qu'on ajoute à la suite.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
+
     nb_un = 0
     nb_deux = 1
     somme = 0
@@ -26,5 +26,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = somme - nb_un
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 4613732 , en : 0 ms.

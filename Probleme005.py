@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_divisible(nombre):
@@ -18,7 +17,7 @@ def est_divisible(nombre):
 # L'itérateur avance par bond du produit des nombres premiers entre 2 et 20, car le nombre recherché
 # doit forcément être une composition de ces nombres.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
 
     trouve = False
     bond = 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19  # les nombre premiers
@@ -33,5 +32,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = iterateur
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 232792560 , en : 0.0 ms.

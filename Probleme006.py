@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def somme_carre():
@@ -28,12 +27,12 @@ def carre_somme():
 # Résumé : On effectue la somme des carrés puis le carré de la somme,
 # puis on calcule la différence entre le deuxième et le premier.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
 
     somme_carre = somme_carre()
     carre_somme = carre_somme()
 
     temps_fin = time.time()
     reponse = carre_somme - somme_carre
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 25164150 , en : 0.0 ms.

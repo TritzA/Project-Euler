@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_triplet_pytago(a, b, c):
@@ -14,7 +13,8 @@ def est_triplet_pytago(a, b, c):
 # Résumé : Tente toutes les combinaisons de sommes possibles de
 # trois nombres étant aussi des triplets pythagoriciens.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
+
     somme_max = 1000
     trouve = False
     a = 1
@@ -35,5 +35,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = produit
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 31875000 , en : 176.9186 ms.

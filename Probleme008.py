@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def lire_nombre():
@@ -34,7 +33,8 @@ def lire_nombre():
 # à la fois en conservant le plus grand produit. Si l'itérateur arrive sur un 0,
 # il passe tous les produits possibles contenant ce dernier.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
+
     taille_produit = 13
     chaine_nombre = lire_nombre()
     produit_max = 0
@@ -60,5 +60,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = produit_max
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 23514624000 , en : 1.9982 ms.

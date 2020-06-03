@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_premier(nb):
@@ -20,7 +19,8 @@ def est_premier(nb):
 
 # Résumé : On parcourt les nombres de 3 à 2M par bonds de 2 avec une somme commençant à 2 (seul nombre premier pair).
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
+
     iterateur = 3
     somme = 2
     dernier_nombre = 2000000
@@ -32,5 +32,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = somme
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 142913828922 , en : 67604.2771 ms.

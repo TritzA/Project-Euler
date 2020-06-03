@@ -2,9 +2,8 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_Palindrome(nb):
@@ -32,7 +31,7 @@ def decomposition_facteur_possible(nb):
 # on cherche un nombre qui est à la fois et palindrome
 # et décomposable en deux facteurs composés de trois chiffres.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
+    temps_debut = time.time_ns()
 
     trouve = False
     iterateur = 999 * 999
@@ -45,5 +44,5 @@ if __name__ == '__main__':
 
     temps_fin = time.time()
     reponse = iterateur
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 906609 , en : 206.4501 ms.

@@ -2,33 +2,29 @@ import time
 import math
 
 
-def fin_temps(temps_initial):
-    temps_final = time.time_ns()
-    return (temps_final - temps_initial) / math.pow(10, 6)
+def fin_temps(temps_fin, temps_debut):
+    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
-def est_multiple(nombre, multiple):
-    return nombre % multiple == 0
-
-
-# Résumé : On parcourt les nombres de 1 à 1000.
-# Si un nombre multiple de 3 on l'ajoute à la somme.
-# S'il ne l'est pas on vérifie s'il est multiple de 5,
-# si c'est le cas on l'ajoute à la somme.
+# Résume : Compte le nombre de multiple dans chaque ensemble,
+# puis multiplie ce nombre par la valeur moyenne du multiple.
+# Finalement, effectu l'union entre les ensemble et retire
+# l'ensemble des multiple de 3 et de 5 (donc de 15) qui sont comptés deux fois.
 if __name__ == '__main__':
-    temps_initial = time.time_ns()
-    nombre = 3
-    somme = 0
-    dernier_nombre = 1000
+    temps_debut = time.time_ns()
+    fin = 999
 
-    while nombre < dernier_nombre:
-        if est_multiple(nombre, 3):
-            somme += nombre
-        elif est_multiple(nombre, 5):
-            somme += nombre
-        nombre += 1
+    # diviseurs
+    div = [3, 5, 15]
+    # calcul le nombre de multiple
+    taille = [math.floor(fin / div[0]), math.floor(fin / div[1]), math.floor(fin / div[2])]
+    # dernier multiple
+    fin = [taille[0] * div[0], taille[1] * div[1], taille[2] * div[2]]
+    # somme par moyenne
+    somme = [taille[0] * (fin[0] + div[0]) / 2, taille[1] * (fin[1] + div[1]) / 2, taille[2] * (fin[2] + div[2]) / 2]
 
-    temps_fin = time.time()
-    reponse = somme
-    print("Réponse :", reponse, ", en :", fin_temps(temps_initial), "ms.")
-    # Réponse : 233168 , en : 0.9993 ms.
+    temps_fin = time.time_ns()
+    # l'ensemble des multiples des deux est compté deux fois
+    reponse = int(somme[0] + somme[1] - somme[2])
+    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
+    # Réponse : 233168 , en : 0.0 ms.
