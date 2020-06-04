@@ -11,20 +11,19 @@ def fin_temps(temps_fin, temps_debut):
 if __name__ == '__main__':
     temps_debut = time.time_ns()
 
-    nb_un = 0
+    nb_un = 1
     nb_deux = 1
+    nb_trois = nb_un + nb_deux
     somme = 0
-    dernier_nombre = 4000000
+    fin = 4000000
 
-    while nb_un < dernier_nombre:
-        nb_un = nb_un + nb_deux  # devient le troisième nombre
-        nb_deux = nb_un + nb_deux  # devient le quatrième nombre (ce nombre est paire, si la suite commence à n=0,
-        # si n%3 == 0, alors n est paire)
-        nb_un = nb_un + nb_deux  # devient le cinquième
-        nb_un, nb_deux = nb_deux, nb_un  # rétablie l'ordre pour que nb_un soit < que nb_deux
-        somme += nb_un
+    while nb_trois < fin:
+        somme += nb_trois
+        nb_un = nb_deux + nb_trois
+        nb_deux = nb_un + nb_trois
+        nb_trois = nb_un + nb_deux
 
     temps_fin = time.time_ns()
-    reponse = somme - nb_un
+    reponse = somme
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 4613732 , en : 0 ms.
