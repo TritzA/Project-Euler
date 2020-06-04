@@ -6,7 +6,7 @@ def fin_temps(temps_fin, temps_debut):
     return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
-# Résume : Compte le nombre de multiple dans chaque ensemble,
+# Résumé : Compte le nombre de multiple dans chaque ensemble,
 # puis multiplie ce nombre par la valeur moyenne du multiple.
 # Finalement, effectue l'union entre les ensembles et retire
 # l'ensemble des multiples de 3 et de 5 (donc de 15) qui sont comptés deux fois.
