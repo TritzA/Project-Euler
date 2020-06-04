@@ -24,7 +24,7 @@ if __name__ == '__main__':
         nb_un, nb_deux = nb_deux, nb_un  # rétablie l'ordre pour que nb_un soit < que nb_deux
         somme += nb_un
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = somme - nb_un
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 4613732 , en : 0 ms.

@@ -32,7 +32,7 @@ if __name__ == '__main__':
             compteur_premier += 1
         nombre_teste += 2
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = nombre_teste - 2
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 104743 , en : 346.8201 ms.

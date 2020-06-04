@@ -30,7 +30,7 @@ if __name__ == '__main__':
         else:
             iterateur += bond
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = iterateur
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 232792560 , en : 0.0 ms.

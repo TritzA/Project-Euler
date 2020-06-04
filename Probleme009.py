@@ -33,7 +33,7 @@ if __name__ == '__main__':
         b = 1
         a += 1
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = produit
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 31875000 , en : 176.9186 ms.

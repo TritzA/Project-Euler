@@ -32,7 +32,7 @@ if __name__ == '__main__':
     somme_carre = somme_carre()
     carre_somme = carre_somme()
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = carre_somme - somme_carre
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 25164150 , en : 0.0 ms.

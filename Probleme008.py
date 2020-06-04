@@ -58,7 +58,7 @@ if __name__ == '__main__':
             produit_max = produit_temporaire  # si trouve un plus grand produit
         iterateur += 1
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = produit_max
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 23514624000 , en : 1.9982 ms.

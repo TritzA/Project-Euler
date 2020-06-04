@@ -7,8 +7,8 @@ def fin_temps(temps_fin, temps_debut):
 
 
 def sommeMultiple(nb, fin=999):
-    taille = math.floor(fin / nb) # nombre de multiples
-    return int(taille * (((nb) + (nb * taille)) / 2)) # multiplie le nombre de multiples par sa valeur moyenne
+    taille = fin // nb  # nombre de multiples
+    return taille * (((nb) + (nb * taille)) / 2)  # multiplie le nombre de multiples par sa valeur moyenne
 
 
 # Résumé : Compte le nombre de multiple dans chaque ensemble,
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     temps_debut = time.time_ns()
     fin = 999
 
-    sommeTotale = sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(15)
+    sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(15))
 
     temps_fin = time.time_ns()
     # l'ensemble des multiples des deux est compté deux fois

@@ -52,7 +52,7 @@ if __name__ == '__main__':
         nombre = nombre / recherche_facteur  # on divise le nombre par un de ses facteurs premier
         trouve_facteur_premier = False
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = int(nombre)
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 6857 , en : 0.9989 ms.

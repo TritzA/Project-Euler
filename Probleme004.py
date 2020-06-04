@@ -42,7 +42,7 @@ if __name__ == '__main__':
         else:
             iterateur -= 1
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = iterateur
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 906609 , en : 206.4501 ms.

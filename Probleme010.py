@@ -30,7 +30,7 @@ if __name__ == '__main__':
             somme += iterateur
         iterateur += 2
 
-    temps_fin = time.time()
+    temps_fin = time.time_ns()
     reponse = somme
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
     # Réponse : 142913828922 , en : 67604.2771 ms.
