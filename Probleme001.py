@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     # diviseurs
     div = [3, 5, 15]
-    # calcul le nombre de multiple
+    # calcul le nombre de multiples
     taille = [math.floor(fin / div[0]), math.floor(fin / div[1]), math.floor(fin / div[2])]
     # dernier multiple
     fin = [taille[0] * div[0], taille[1] * div[1], taille[2] * div[2]]
