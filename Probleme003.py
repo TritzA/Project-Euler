@@ -9,7 +9,7 @@ def fin_temps(temps_fin, temps_debut):
 def est_premier(nb):
     diviseur = 3
     premier = True
-    max_diviseur = math.floor(math.sqrt(nb))+1
+    max_diviseur = math.floor(math.sqrt(nb)) + 1
     while diviseur < max_diviseur and premier:
         if nb % diviseur == 0:
             premier = False
@@ -30,9 +30,10 @@ if __name__ == '__main__':
 
     nombre = 600851475143
     recherche_facteur = 2
-    facteur_max = 0
     trouve_facteur_premier = False
 
+    # test pour en cas de nombre pair,
+    # permet de faire des bonds de 2 ensuite
     if nombre % recherche_facteur == 0:
         trouve_facteur_premier = True
     else:
@@ -40,19 +41,19 @@ if __name__ == '__main__':
 
     while not est_premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
-        while not trouve_facteur_premier or trouve_facteur_premier < facteur_max:
+        while not trouve_facteur_premier:
 
-            if nombre % recherche_facteur == 0 and est_premier(recherche_facteur):
+            if nombre % recherche_facteur == 0:
                 trouve_facteur_premier = True
-                if recherche_facteur < facteur_max:
-                    facteur_max = recherche_facteur
             else:
                 recherche_facteur += 2
 
-        nombre = nombre / recherche_facteur  # on divise le nombre par un de ses facteurs premier
+        # après avoir trouvé un facteur premier,
+        # on divise le nombre par un de ses facteurs premier
+        nombre = nombre // recherche_facteur
         trouve_facteur_premier = False
 
     temps_fin = time.time_ns()
-    reponse = int(nombre)
+    reponse = nombre
     print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 6857 , en : 0.9989 ms.
+    # Réponse : 6857 , en : 0.0 ms.
