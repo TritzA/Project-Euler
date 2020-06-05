@@ -9,7 +9,7 @@ def fin_temps(temps_fin, temps_debut):
 def est_premier(nb):
     diviseur = 3
     premier = True
-    max_diviseur = math.floor(math.sqrt(nb)) + 1
+    max_diviseur = math.floor(math.sqrt(nb))
     while diviseur < max_diviseur and premier:
         if nb % diviseur == 0:
             premier = False
