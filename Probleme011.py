@@ -99,7 +99,10 @@ def lire_matrice():
     print(mat)
 
 
-# Résumé :
+# Résumé : On trouve le produit de chacune quatre dispositions possibles.
+# Ensuite, on sélectionne le produit maximum des quatre.
+# À noter que lorsqu'on arrive sur un 0 dans la recherche horizontale ou verticale,
+# on saute le calcul des produits suivant qui auraient été égaux à 0.
 if __name__ == '__main__':
     temps_debut = time.time_ns()
 
