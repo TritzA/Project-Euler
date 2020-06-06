@@ -13,7 +13,6 @@ def sommeMultiple(nb, fin=999):
 # l'ensemble des multiples de 3 et de 5 (donc de 15) qui sont comptés deux fois.
 if __name__ == '__main__':
     temps_debut = time.time_ns()
-    fin = 999
 
     # l'ensemble des multiples des deux (3 * 5 = 15) est compté deux fois
     sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(15))
