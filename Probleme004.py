@@ -1,30 +1,27 @@
 import time
-import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
+import Utilitaire
 
 
 def est_Palindrome(nb):
     chaine_nb = str(nb)
-    i = 0
+    k = 0
     palindrome = True
-    while i < int(len(chaine_nb) / 2) + 1 and palindrome:
-        if chaine_nb[i] != chaine_nb[len(chaine_nb) - (i + 1)]:
+    while k < len(chaine_nb) // 2 and palindrome:
+        if chaine_nb[k] != chaine_nb[len(chaine_nb) - (k + 1)]:
             palindrome = False
-        i += 1
+        k += 1
     return palindrome
 
 
 def decomposition_facteur_possible(nb):
-    decomposition = False
-    i = 999
-    while i > 99 and not decomposition:
-        if nb % i == 0 and len((str(int(nb / i)))) == 3:
-            decomposition = True
-        i -= 1
-    return decomposition
+    decomposable = False
+    j = 999
+    while j > 99 and not decomposable:
+        if nb % j == 0:
+            if Utilitaire.taille(nb // j) == 3:  # ou pas entiere
+                decomposable = True
+        j -= 1
+    return decomposable
 
 
 # Résumé : En partant du plus gros nombre possible,
@@ -34,15 +31,17 @@ if __name__ == '__main__':
     temps_debut = time.time_ns()
 
     trouve = False
-    iterateur = 999 * 999
+    i = 999 * 999
 
     while not trouve:
-        if est_Palindrome(iterateur) and decomposition_facteur_possible(iterateur):
-            trouve = True
+        if est_Palindrome(i):
+            if decomposition_facteur_possible(i):
+                trouve = True
+            else:
+                i -= 1
         else:
-            iterateur -= 1
+            i -= 1
 
     temps_fin = time.time_ns()
-    reponse = iterateur
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 906609 , en : 206.4501 ms.
+    Utilitaire.afficher_reponse(i, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 906609 , en : 138.9231 ms.

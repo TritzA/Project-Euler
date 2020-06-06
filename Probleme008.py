@@ -1,9 +1,5 @@
 import time
-import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
+import Utilitaire
 
 
 def lire_nombre():
@@ -38,27 +34,26 @@ if __name__ == '__main__':
     taille_produit = 13
     chaine_nombre = lire_nombre()
     produit_max = 0
-    iterateur = 0
+    i = 0
 
-    while iterateur < len(chaine_nombre) - (taille_produit - 1):
+    while i < len(chaine_nombre) - (taille_produit - 1):
 
         produit_temporaire = 1
-        i = 0
+        j = 0
         presence_zero = False
 
-        while i < taille_produit and not presence_zero:
+        while j < taille_produit and not presence_zero:
             if produit_temporaire == 0:
                 presence_zero = True  # sort de la boucle si croise un 0
-                iterateur += 2 * taille_produit - 2  # passe la section où il y a un 0
+                i += 2 * taille_produit - 2  # passe la section où il y a un 0
             else:
-                produit_temporaire *= int(chaine_nombre[iterateur + i])  # sinon continue sa recherche de 0
-                i += 1
+                produit_temporaire *= int(chaine_nombre[i + j])  # sinon continue sa recherche de 0
+                j += 1
 
         if produit_max < produit_temporaire:
             produit_max = produit_temporaire  # si trouve un plus grand produit
-        iterateur += 1
+        i += 1
 
     temps_fin = time.time_ns()
-    reponse = produit_max
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 23514624000 , en : 1.9982 ms.
+    Utilitaire.afficher_reponse(produit_max, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 23514624000 , en : 0 ns.

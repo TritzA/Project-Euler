@@ -1,22 +1,5 @@
 import time
-import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
-
-
-def est_premier(nb):
-    diviseur = 3
-    premier = True
-    max_diviseur = math.floor(math.sqrt(nb))
-    while diviseur < max_diviseur and premier:
-        if nb % diviseur == 0:
-            premier = False
-        else:
-            diviseur += 2
-    return premier
-
+import Utilitaire
 
 # Résumé : En partant de notre nombre de départ
 # dès qu'on trouve un de ses facteurs premier,
@@ -39,7 +22,7 @@ if __name__ == '__main__':
     else:
         recherche_facteur += 1
 
-    while not est_premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
+    while not Utilitaire.est_premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
         while not trouve_facteur_premier:
 
@@ -54,6 +37,5 @@ if __name__ == '__main__':
         trouve_facteur_premier = False
 
     temps_fin = time.time_ns()
-    reponse = nombre
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 6857 , en : 0.0 ms.
+    Utilitaire.afficher_reponse(nombre, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 6857 , en : 0 ns.

@@ -1,9 +1,6 @@
 import time
+import Utilitaire
 import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
 
 
 def est_triplet_pytago(a, b, c):
@@ -34,6 +31,5 @@ if __name__ == '__main__':
         a += 1
 
     temps_fin = time.time_ns()
-    reponse = produit
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 31875000 , en : 176.9186 ms.
+    Utilitaire.afficher_reponse(produit, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 31875000 , en : 153.7837 ms.

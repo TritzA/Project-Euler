@@ -1,9 +1,5 @@
 import time
-import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
+import Utilitaire
 
 
 def sommeMultiple(nb, fin=999):
@@ -19,10 +15,9 @@ if __name__ == '__main__':
     temps_debut = time.time_ns()
     fin = 999
 
+    # l'ensemble des multiples des deux (3 * 5 = 15) est compté deux fois
     sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(15))
 
     temps_fin = time.time_ns()
-    # l'ensemble des multiples des deux est compté deux fois
-    reponse = sommeTotale
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 233168 , en : 0.0 ms.
+    Utilitaire.afficher_reponse(sommeTotale, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 233168 , en : 0 ns.

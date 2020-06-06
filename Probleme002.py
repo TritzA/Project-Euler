@@ -1,10 +1,5 @@
 import time
-import math
-
-
-def fin_temps(temps_fin, temps_debut):
-    return (temps_fin - temps_debut) / math.pow(10, 6)
-
+import Utilitaire
 
 # Résumé : On parcourt la suite de Fibonacci par bonds de 3,
 # chaque 3 nombres on trouve un nombre pair qu'on ajoute à la suite.
@@ -24,6 +19,5 @@ if __name__ == '__main__':
         nb_trois = nb_un + nb_deux
 
     temps_fin = time.time_ns()
-    reponse = somme
-    print("Réponse :", reponse, ", en :", fin_temps(temps_fin, temps_debut), "ms.")
-    # Réponse : 4613732 , en : 0 ms.
+    Utilitaire.afficher_reponse(somme, Utilitaire.fin_temps(temps_debut, temps_fin))
+    # Réponse : 4613732 , en : 0 ns.
