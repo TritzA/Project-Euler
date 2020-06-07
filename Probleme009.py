@@ -1,10 +1,9 @@
 import time
 import Utilitaire
-import math
 
 
 def est_triplet_pytago(a, b, c):
-    return math.pow(a, 2) + math.pow(b, 2) == math.pow(c, 2)
+    return a ** 2 + b ** 2 == c ** 2
 
 
 # Résumé : Tente toutes les combinaisons de sommes possibles de

@@ -14,8 +14,8 @@ def sommeMultiple(nb, fin=999):
 if __name__ == '__main__':
     temps_debut = time.time_ns()
 
-    # l'ensemble des multiples des deux (3 * 5 = 15) est compté deux fois
-    sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(15))
+    # l'ensemble des multiples de 3 et de 5 est compté deux fois
+    sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(3 * 5))
 
     temps_fin = time.time_ns()
     Utilitaire.afficher_reponse(sommeTotale, Utilitaire.fin_temps(temps_debut, temps_fin))
