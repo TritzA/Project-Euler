@@ -15,7 +15,8 @@ if __name__ == '__main__':
     temps_debut = time.time()
 
     # l'ensemble des multiples de 3 et de 5 est compté deux fois
-    sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(3 * 5))
+    union = 3 * 5
+    sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(union))
 
     temps_fin = time.time()
     Uti.rep(sommeTotale, temps_fin - temps_debut)
