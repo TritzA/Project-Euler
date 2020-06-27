@@ -1,34 +1,37 @@
 import time
-import Utilitaire
+import Uti
 
 
 def est_triplet_pytago(a, b, c):
     return a ** 2 + b ** 2 == c ** 2
 
 
-# Résumé : Tente toutes les combinaisons de sommes possibles de
+# Résumé : On tente toutes les combinaisons de sommes possibles de
 # trois nombres étant aussi des triplets pythagoriciens.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     somme_max = 1000
     trouve = False
-    a = 1
-    b = 1
+
+    # normalement on devrait commencer la variable a à la plus petite valeur de triplet 3,
+    # mais on veut démarrer d'un nombre pair étant donné que a est incrémenter par 2 à chaque itération
+    a = 4
     c = 1
 
-    while a < somme_max - b - c and not trouve:  # incrémentation de a
+    while not trouve:  # incrémentation de a
 
+        b = 1
         c = somme_max - a - b
-        while c > int((somme_max - a) / 2) and not trouve:  # variations de b et de c à la fois
+        while c > (somme_max - a) // 2 and not trouve:  # variations de b et de c à la fois
             if est_triplet_pytago(a, b, c):
                 produit = a * b * c
                 trouve = True
             c -= 1
             b += 1
-        b = 1
-        a += 1
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(produit, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 31875000 , en : 153.7837 ms.
+        a += 2  # il y a forcément au moins un nombre pair dans un triplet
+
+    temps_fin = time.time()
+    Uti.rep(produit, temps_fin - temps_debut)
+    # Réponse : 31875000 , en : 0.093 s.

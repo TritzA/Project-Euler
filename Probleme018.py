@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def lire_mat():
@@ -44,7 +44,7 @@ def lire_mat():
 # On répète ce processus sur l'entièreté des colonnes de chaque ligne. À la fin, la matrice est complètement transformée
 # et nombre au sommet de la pyramide indique la plus grande somme possible.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     # lire_mat()
     mat = [[75],
@@ -73,6 +73,6 @@ if __name__ == '__main__':
             colonne += 1
         ligne -= 1
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(mat[0][0], Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 1074 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(mat[0][0], temps_fin - temps_debut)
+    # Réponse : 1074 , en : 0.000 s.

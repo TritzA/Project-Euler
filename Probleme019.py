@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def est_bissexile(annee):
@@ -32,11 +32,11 @@ def nombre(debut, bissex):
     return nb, debut
 
 
-# Résumé : On teste si tous les premier du mois du XXe sciècle était un dimanche
+# Résumé : On teste si tous les premiers du mois du XXe sciècle étaient un dimanche
 # par bonds du nombre de jours dans un mois.
 # Les jours de la semaines sont numérotés de 0 (dimanche) à 6 (samedi).
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     nb = 0
     jour = 2  # le premier janvier 1901 était un mardi
@@ -45,6 +45,6 @@ if __name__ == '__main__':
         ajout, jour = nombre(jour, bissex)
         nb += ajout
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(nb, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 171 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(nb, temps_fin - temps_debut)
+    # Réponse : 171 , en : 0.000 s.

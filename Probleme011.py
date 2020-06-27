@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def horizontale(mat):
@@ -103,7 +103,7 @@ def lire_matrice():
 # À noter que lorsqu'on arrive sur un 0 dans la recherche horizontale ou verticale,
 # on saute le calcul des produits suivant qui auraient été égaux à 0.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     # lire_matrice()
     mat = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -128,6 +128,6 @@ if __name__ == '__main__':
            [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
     array = [horizontale(mat), verticale(mat), diagonale_un(mat), diagonale_deux(mat)]
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(max(array), Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 70600674 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(max(array), temps_fin - temps_debut)
+    # Réponse : 70600674 , en : 0.000 s.

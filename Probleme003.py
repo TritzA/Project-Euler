@@ -1,5 +1,6 @@
 import time
-import Utilitaire
+import Uti
+import Nb
 
 # Résumé : En partant de notre nombre de départ
 # dès qu'on trouve un de ses facteurs premier,
@@ -9,7 +10,7 @@ import Utilitaire
 # soit premier ou qu'il soit plus petit que le plus
 # grand facteur premier trouvé.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     nombre = 600851475143
     recherche_facteur = 2
@@ -22,7 +23,7 @@ if __name__ == '__main__':
     else:
         recherche_facteur += 1
 
-    while not Utilitaire.est_premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
+    while not Nb.premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
         while not trouve_facteur_premier:
 
@@ -36,6 +37,6 @@ if __name__ == '__main__':
         nombre = nombre // recherche_facteur
         trouve_facteur_premier = False
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(nombre, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 6857 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(nombre, temps_fin - temps_debut)
+    # Réponse : 6857 , en : 0.000 s.

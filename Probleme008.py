@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def lire_nombre():
@@ -29,7 +29,7 @@ def lire_nombre():
 # à la fois en conservant le plus grand produit. Si l'itérateur arrive sur un 0,
 # il passe tous les produits possibles contenant ce dernier.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     taille_produit = 13
     chaine_nombre = lire_nombre()
@@ -54,6 +54,6 @@ if __name__ == '__main__':
             produit_max = produit_temporaire  # si trouve un plus grand produit
         i += 1
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(produit_max, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 23514624000 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(produit_max, temps_fin - temps_debut)
+    # Réponse : 23514624000 , en : 0.001 s.

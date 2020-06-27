@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def lire_matrice():
@@ -117,7 +117,7 @@ def lire_matrice():
 
 # Résumé : On calcule la somme en ne tenant en compte que des 12 premiers chiffres de chaque nombre.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     # lire_matrice()
     mat = [37107287533902102798797998220837590246510135740250, 46376937677490009712648124896970078050417018260538,
@@ -174,6 +174,6 @@ if __name__ == '__main__':
     for i in range(0, 100):
         somme += int((str(mat[i]))[0:12])  # on coupe la partie inutile du nombre pour calculer la somme
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse((str(somme)[0:10]), Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 5537376230 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep((str(somme)[0:10]), temps_fin - temps_debut)
+    # Réponse : 5537376230 , en : 0.000 s.

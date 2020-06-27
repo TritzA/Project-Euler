@@ -1,5 +1,5 @@
 import time
-import Utilitaire
+import Uti
 
 
 def sommeMultiple(nb, fin=999):
@@ -12,11 +12,11 @@ def sommeMultiple(nb, fin=999):
 # Finalement, effectue l'union entre les ensembles et retire
 # l'ensemble des multiples de 3 et de 5 (donc de 15) qui sont comptés deux fois.
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     # l'ensemble des multiples de 3 et de 5 est compté deux fois
     sommeTotale = int(sommeMultiple(3) + sommeMultiple(5) - sommeMultiple(3 * 5))
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(sommeTotale, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : 233168 , en : 0 ns.
+    temps_fin = time.time()
+    Uti.rep(sommeTotale, temps_fin - temps_debut)
+    # Réponse : 233168 , en : 0.000 s

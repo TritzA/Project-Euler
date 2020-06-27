@@ -1,12 +1,12 @@
 import time
-import Utilitaire
+import Uti
 
 # Résumé :
 if __name__ == '__main__':
-    temps_debut = time.time_ns()
+    temps_debut = time.time()
 
     # CODE ICI
 
-    temps_fin = time.time_ns()
-    Utilitaire.afficher_reponse(-1, Utilitaire.fin_temps(temps_debut, temps_fin))
-    # Réponse : -1 , en : -1 ms.
+    temps_fin = time.time()
+    Uti.rep(-1, temps_fin - temps_debut)
+    # Réponse : -1 , en : -1 s.
