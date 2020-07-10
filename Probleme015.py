@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : Grace à la fonction "combinaison",

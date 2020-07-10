@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : On effectue la puissance, puis on somme tous ces chiffres.

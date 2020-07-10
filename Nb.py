@@ -1,4 +1,5 @@
 import math
+
 import Uti
 
 
@@ -23,6 +24,12 @@ def premier(n):
                 return False  # sort de la fonction
             f += 6
     return True  # dans tous les autres cas
+
+
+def compose(n):
+    if premier(n):
+        return False
+    return True
 
 
 def parfait(n):
@@ -65,6 +72,12 @@ def triangulaire(n):
     return False
 
 
+def pentagonal(n):
+    if (1 + math.sqrt(24 * n + 1)) % 6 == 0:
+        return True
+    return False
+
+
 def palindrome(nb):
     nb = str(nb)
     k = 0
@@ -72,4 +85,15 @@ def palindrome(nb):
         if nb[k] != nb[len(nb) - (k + 1)]:
             return False
         k += 1
+    return True
+
+
+def pandigital(chaine, n=9):
+    if len(chaine) != n:
+        return False
+    for i in range(1, n + 1):
+        if str(i) in chaine:
+            chaine = chaine.replace(str(i), "")
+        else:
+            return False
     return True

@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : On passe de nombre triangulaire en nombre triangulaire

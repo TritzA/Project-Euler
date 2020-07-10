@@ -1,6 +1,7 @@
 import time
-import Uti
+
 import Nb
+import Uti
 
 # Résumé : On passe à travers les nombres de 2 à 10000
 # exclu en charchant si chaque nombre à un nombre ami.

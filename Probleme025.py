@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : On parcourt la suite de Fibonacci jusqu'à trouver un nombre formé de 1000 chiffres.

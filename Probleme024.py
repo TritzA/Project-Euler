@@ -1,6 +1,7 @@
-import time
-import Uti
 import math
+import time
+
+import Uti
 
 objectif = 1000000
 

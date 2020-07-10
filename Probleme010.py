@@ -1,6 +1,7 @@
 import time
-import Uti
+
 import Nb
+import Uti
 
 # Résumé : On parcourt les nombres de 3 à 2M par bonds de 2
 # avec une somme commençant à 2 (seul nombre premier pair).

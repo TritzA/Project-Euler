@@ -58,7 +58,7 @@ def binary_search(arr, low, high, x):  # Code internet à revoir
 
 
 def lire(nom_fichier):
-    mon_fichier = open("Fichiers/"+nom_fichier, "r")
+    mon_fichier = open("Fichiers/" + nom_fichier, "r")
     contenu = mon_fichier.read()
     mon_fichier.close()
     return contenu

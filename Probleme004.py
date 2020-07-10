@@ -1,6 +1,7 @@
 import time
-import Uti
+
 import Nb
+import Uti
 
 
 def decomposition_facteur_possible(nb):
@@ -21,16 +22,13 @@ if __name__ == '__main__':
     temps_debut = time.time()
 
     trouve = False
-    i = 999 * 999
+    i = 999 * 999 + 1
 
     while not trouve:
+        i -= 1
         if Nb.palindrome(i):
             if decomposition_facteur_possible(i):
                 trouve = True
-            else:
-                i -= 1
-        else:
-            i -= 1
 
     temps_fin = time.time()
     Uti.rep(i, temps_fin - temps_debut)

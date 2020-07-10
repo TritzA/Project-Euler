@@ -1,5 +1,8 @@
 import time
+
 import Uti
+
+taille = 15
 
 
 def lire_mat():
@@ -20,7 +23,7 @@ def lire_mat():
              "04 62 98 27 23 09 70 98 73 93 38 53 60 04 23 "
     mat = "mat = ["
     i = 0
-    while i < 15:
+    while i < taille:
         if i != 0:
             mat += ",["
         else:
@@ -62,7 +65,8 @@ if __name__ == '__main__':
            [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
            [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
            [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
-    ligne = 14
+
+    ligne = taille - 1
     while ligne > 0:
         colonne = 0
         while colonne < ligne:

@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : On parcourt la suite de Fibonacci par bonds de 3,
@@ -6,17 +7,17 @@ import Uti
 if __name__ == '__main__':
     temps_debut = time.time()
 
-    nb_un = 1
-    nb_deux = 1
-    nb_trois = nb_un + nb_deux
+    a = 1
+    b = 1
+    c = a + b
     somme = 0
     fin = 4000000
 
-    while nb_trois < fin:
-        somme += nb_trois
-        nb_un = nb_deux + nb_trois
-        nb_deux = nb_un + nb_trois
-        nb_trois = nb_un + nb_deux
+    while c < fin:
+        somme += c
+        a = b + c
+        b = a + c
+        c = a + b
 
     temps_fin = time.time()
     Uti.rep(somme, temps_fin - temps_debut)

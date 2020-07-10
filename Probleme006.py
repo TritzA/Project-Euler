@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé : On effectue la somme des carrés puis le carré de la somme,

@@ -1,6 +1,7 @@
 import time
-import Uti
+
 import Nb
+import Uti
 
 # Résumé : On passe à travers les nombres en comptant à l'aide d'un compteur chaque fois qu'on en trouve un premier.
 # La recherche se fait par bonds de deux à partir d'un nombre impair (3) et le compteur commence à 1 à cause du seul

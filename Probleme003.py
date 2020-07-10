@@ -1,6 +1,8 @@
+import math
 import time
-import Uti
+
 import Nb
+import Uti
 
 # Résumé : En partant de notre nombre de départ
 # dès qu'on trouve un de ses facteurs premier,
@@ -13,19 +15,12 @@ if __name__ == '__main__':
     temps_debut = time.time()
 
     nombre = 600851475143
-    recherche_facteur = 2
+    recherche_facteur = 3  # car 2 ne fait pas partie de ses facteur premiers
     trouve_facteur_premier = False
-
-    # test pour en cas de nombre pair,
-    # permet de faire des bonds de 2 ensuite
-    if nombre % recherche_facteur == 0:
-        trouve_facteur_premier = True
-    else:
-        recherche_facteur += 1
 
     while not Nb.premier(nombre):  # tant qu'on a pas réduit le nombre à un facteur premier
 
-        while not trouve_facteur_premier:
+        while not trouve_facteur_premier and recherche_facteur <= math.sqrt(nombre):
 
             if nombre % recherche_facteur == 0:
                 trouve_facteur_premier = True

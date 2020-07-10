@@ -1,6 +1,7 @@
-import time
-import Uti
 import math
+import time
+
+import Uti
 
 # Résumé : On calcule le produit, puis on somme ces chiffres.
 if __name__ == '__main__':

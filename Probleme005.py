@@ -1,4 +1,5 @@
 import time
+
 import Uti
 
 # Résumé: On trouve le PPCM des nombres de 2 à 20.
