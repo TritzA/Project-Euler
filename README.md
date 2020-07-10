@@ -12,6 +12,6 @@ Interpréteur : [Python 3.8](https://www.python.org/downloads/)
 
 IDE (environnement) : [PyCharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/#section=windows)
 
-Site et probèmes : [Project Euler](https://projecteuler.net)
+Site et problèmes : [Project Euler](https://projecteuler.net)
 
 Ma clé d'amitié sur le site : 1387552_IPAXB5s9J1fKBieZnocM4PGI04vkeR0P
