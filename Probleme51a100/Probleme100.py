@@ -2,7 +2,7 @@ import time
 
 from Utilitaire import Gene
 
-# Résumé :
+# Résumé : La classe du dernier problème du dernier package de problème sert de modèle.
 if __name__ == '__main__':
     temps_debut = time.time()
 
