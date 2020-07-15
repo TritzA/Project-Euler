@@ -14,4 +14,4 @@ IDE (environnement) : [PyCharm Community](https://www.jetbrains.com/fr-fr/pychar
 
 Site et problèmes : [Project Euler](https://projecteuler.net)
 
-Pseudo sur le site : Tritz
+Pseudo sur le site : 1387552_IPAXB5s9J1fKBieZnocM4PGI04vkeR0P
