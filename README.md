@@ -10,7 +10,7 @@ Je suis finissant du préuniversitaire Sciences informatiques et mathématiques 
 ## Utilisations
 Interpréteur : [Python 3.8](https://www.python.org/downloads/)
 
-IDE (environnement) : [PyCharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/#section=windows)
+IDE : [PyCharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/#section=windows)
 
 Site et problèmes : [Project Euler](https://projecteuler.net)
 
