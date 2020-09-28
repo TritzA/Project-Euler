@@ -17,3 +17,12 @@ Site et problèmes : [Project Euler](https://projecteuler.net)
 Pseudo sur le site : Tritz
 
 Clé d'amitié : 1387552_IPAXB5s9J1fKBieZnocM4PGI04vkeR0P
+
+## Représentation
+Ma progression dans la résolution des problèmes.
+
+![alt text](https://github.com/TritzA/ProjectEuler/blob/master/progression.PNG)
+
+Progression du pourcentage des membres en fonction de le nombre de problèmes résolus.
+
+![alt text](https://github.com/TritzA/ProjectEuler/blob/master/comparaison.png)
