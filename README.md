@@ -22,7 +22,7 @@ Clé d'amitié : 1387552_IPAXB5s9J1fKBieZnocM4PGI04vkeR0P
 
 Ma progression dans la résolution des problèmes.
 
-![alt text](https://github.com/TritzA/ProjectEuler/blob/master/images/progression.PNG)
+![alt text](https://github.com/TritzA/ProjectEuler/blob/master/images/progression.png)
 
 Progression du pourcentage des membres en fonction de le nombre de problèmes résolus.
 
