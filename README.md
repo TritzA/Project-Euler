@@ -1,6 +1,6 @@
 # ProjectEuler
 
-Solutions des problèmes du Projet Euler (plus de 50 résolus).
+Solutions des problèmes math-algo du Projet Euler (plus de 50 résolus).
 
 ## Objectifs
 
